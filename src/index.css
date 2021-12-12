@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  /* font-family: "Cookie", cursive; */
+  font-family: "Nunito", sans-serif;
+  /* font-family: "Poiret One", cursive;
+  font-family: "Roboto Mono", monospace; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #caeaf9;
+  background-color: #f9f8f8;
 }
 
 code {
@@ -27,14 +28,15 @@ header {
 }
 
 .card {
-  border: 3px solid #aa63d7;
-  background-color: #f3f3f3;
+  /* border: 3px solid #aa63d7; */
+  background-color: #ffffff;
   margin: auto;
   padding: 0px 20px 0 20px;
   display: flex;
   flex-direction: column;
   max-width: 85%;
   height: 100%;
+  box-shadow: 6px 6px 2px 1px rgb(194 194 197 / 20%);
 }
 
 .card-container {
@@ -47,19 +49,23 @@ header {
   gap: 20px;
   margin: 20px;
 }
-
+p {
+  font-weight: 300;
+}
 h1 {
   text-shadow: 3px 3px #000000;
   color: #ffce3b;
 }
 .name {
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   text-align: center;
-  background-color: #ba62f3;
-  padding: 10px;
-  border: 1px solid #af7dcf;
-  color: #fff;
+  background-color: #b462f340;
+  padding: 5px;
+  margin-top: 15px;
+  color: #000520;
+  box-shadow: 3px 3px 2px 1px rgb(194 194 197 / 20%);
+  cursor: pointer;
 }
 
 a {
@@ -75,31 +81,36 @@ button {
   margin: 0 auto;
   background-color: antiquewhite;
   border: 1px solid #009688;
+  cursor: pointer;
 }
 
 select {
   margin: 30px 5px 30px 30px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
   font-size: 16px;
   color: navy;
-  border: 2px solid #ffc107;
+  border: 2px solid #ffe79f;
 }
 
 .search-btn {
   border-radius: 5px;
   color: navy;
-  border: 2px solid #ffc107;
-  height: 33px;
+  border: 2px solid #ffe79f;
+  height: 40px;
   font-size: 16px;
   margin-left: 30px;
   width: 90px;
   font-weight: 600;
+  background-color: white;
+}
+.search-btn:hover {
+  border: 2px solid white;
+  background-color: #ffec83;
 }
 
 .titles {
-  /* font-style: italic; */
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media (max-width: 860px) {

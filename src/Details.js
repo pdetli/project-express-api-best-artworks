@@ -18,6 +18,7 @@ export const Details = () => {
 
   const onSetTextInputChange = (event) => {
     setTextInput(event.target.value)
+    event.preventDefault()
   }
 
   const handleInput = (event) => {
@@ -47,7 +48,9 @@ export const Details = () => {
         <option value="?nationality=mexican">Mexican</option>
         <option value="?nationality=dutch">Dutch</option>
       </select>
-      <button className="search-btn">Search</button>
+      <button className="search-btn" onSubmit={handleInput}>
+        Search{" "}
+      </button>
       {textInput.length === 0 && <Artworks />}
       {textInput.length !== 0 && (
         <div className="card-container">
@@ -69,11 +72,6 @@ export const Details = () => {
                 <p>
                   <span className="titles">Bio:</span> {art.bio}
                 </p>
-                {/* <button>
-                  <a href={`${art.wikipedia}`} target="_blank">
-                    Click for wikipedia
-                  </a>
-                </button> */}
               </div>
             </div>
           ))}

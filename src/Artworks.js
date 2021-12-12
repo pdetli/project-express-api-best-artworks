@@ -6,8 +6,6 @@ export const Artworks = () => {
   const ArtworksAPI =
     "https://best-artworks-open-api-pde.herokuapp.com/artworks"
 
-  console.log(arts)
-
   useEffect(() => {
     fetch(ArtworksAPI)
       .then((res) => res.json())
@@ -20,7 +18,15 @@ export const Artworks = () => {
         {arts.map((art) => (
           <div key={art.id}>
             <div className="card">
-              <p className="name">{art.name}</p>
+              <a
+                href={`${art.wikipedia}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="name"
+              >
+                {art.name}
+              </a>
+
               <p>
                 <span className="titles">Year: </span> {art.years}
               </p>
@@ -33,7 +39,7 @@ export const Artworks = () => {
                 {art.genre}.
               </p>
 
-              <button>
+              {/* <button>
                 <a
                   href={`${art.wikipedia}`}
                   target="_blank"
@@ -41,7 +47,7 @@ export const Artworks = () => {
                 >
                   Click for wikipedia
                 </a>
-              </button>
+              </button> */}
             </div>
           </div>
         ))}
