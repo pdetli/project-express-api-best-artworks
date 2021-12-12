@@ -1,19 +1,22 @@
 import React from "react"
-import { Artworks } from "Artworks"
 
-import { BrowserRouter, Route } from "react-router-dom"
+import { Header } from "Header"
+import { Artworks } from "Artworks"
+import { Details } from "Details"
+//import { BrowserRouter, Router, Routes } from "react-router-dom"
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <Artworks />
-      {/* {loading && <Loader />} */}
-      {/* <Switch> */}
-      {/* <Route exact path="/" render={() => <List movies={list} />} />
-      <Route path="/details/:movieId">
-        <Details />
-      </Route> */}
-      {/* </Switch> */}
-    </BrowserRouter>
+    <>
+      <Header />
+      <Details />
+      {/* <Artworks /> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<Artworks />} />
+          <Route path="/arworks/genre/:genre" element={<Genre />} />
+        </Routes> */}
+      {/* </BrowserRouter> */}
+    </>
   )
 }
