@@ -32,7 +32,7 @@ export const Artworks = () => {
                 <span className="titles">Genre: </span>
                 {art.genre}.
               </p>
-              {/* <p>Bio: {art.bio}</p> */}
+
               <button>
                 <a href={`${art.wikipedia}`} target="_blank">
                   Click for wikipedia
