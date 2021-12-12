@@ -2,31 +2,29 @@ import React, { useState } from "react"
 import { Artworks } from "Artworks"
 
 export const Details = () => {
-  const [selectedGenre, setSelectedGenre] = useState([])
+  const [selectedDetail, setSelectedDetail] = useState([])
   const [textInput, setTextInput] = useState("")
 
-  const fetchDetails = (textInput) => {
+  const fetchNetflixTitles = (textInput) => {
     fetch(
       `https://best-artworks-open-api-pde.herokuapp.com/artworks${textInput}`
     )
       .then((res) => res.json())
       .then((json) => {
-        setSelectedGenre(json.response)
-        console.log("from json", json.response)
+        setSelectedDetail(json.response)
       })
   }
 
-  const onSetTextInputChange = (event) => {
-    setTextInput(event.target.value)
-    event.preventDefault()
+  const onSetTextInputChange = (e) => {
+    setTextInput(e.target.value)
   }
 
-  const handleInput = (event) => {
-    fetchDetails(textInput)
+  const handleInput = (e) => {
+    fetchNetflixTitles(textInput)
     setTextInput("")
-    setSelectedGenre([])
-    console.log("setTextinput", setTextInput)
-    event.preventDefault()
+    setSelectedDetail([])
+
+    e.preventDefault()
   }
 
   return (
@@ -43,18 +41,19 @@ export const Details = () => {
       <select type="text" value={textInput} onChange={onSetTextInputChange}>
         <option value="">Search by Nationality</option>
         <option value="?nationality=italian">Italian</option>
+        <option value="?nationality=french">French</option>
         <option value="?nationality=russian">Russian</option>
         <option value="?nationality=spanish">Spanish</option>
         <option value="?nationality=mexican">Mexican</option>
         <option value="?nationality=dutch">Dutch</option>
       </select>
-      <button className="search-btn" onSubmit={handleInput}>
-        Search{" "}
+      <button className="search-btn" onClick={() => handleInput}>
+        Search
       </button>
-      {textInput.length === 0 && <Artworks />}
-      {textInput.length !== 0 && (
-        <div className="card-container">
-          {selectedGenre.map((art) => (
+      {selectedDetail.length === 0 && <Artworks />}
+      {selectedDetail.length !== 0 && (
+        <section className="card-container">
+          {selectedDetail.map((art) => (
             <div key={art.id}>
               <div className="card">
                 <p className="name">{art.name}</p>
@@ -75,7 +74,7 @@ export const Details = () => {
               </div>
             </div>
           ))}
-        </div>
+        </section>
       )}
     </form>
   )

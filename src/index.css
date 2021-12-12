@@ -40,10 +40,6 @@ header {
 }
 
 .card-container {
-  /* display: flex;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -91,6 +87,7 @@ select {
   font-size: 16px;
   color: navy;
   border: 2px solid #ffe79f;
+  background-color: white;
 }
 
 .search-btn {
@@ -139,8 +136,8 @@ select {
     font-size: 12px;
   }
   .search-btn {
+    height: 30px;
     margin-left: 5px;
-
     font-size: 14px;
   }
 }
