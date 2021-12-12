@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Header } from "Header"
-import { Artworks } from "Artworks"
+// import { Artworks } from "Artworks"
 import { Details } from "Details"
 //import { BrowserRouter, Router, Routes } from "react-router-dom"
 

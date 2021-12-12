@@ -34,7 +34,11 @@ export const Artworks = () => {
               </p>
 
               <button>
-                <a href={`${art.wikipedia}`} target="_blank">
+                <a
+                  href={`${art.wikipedia}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Click for wikipedia
                 </a>
               </button>
