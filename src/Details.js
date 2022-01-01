@@ -5,7 +5,7 @@ export const Details = () => {
   const [selectedDetail, setSelectedDetail] = useState([])
   const [textInput, setTextInput] = useState("")
 
-  const fetchNetflixTitles = (textInput) => {
+  const fetchArtworks = (textInput) => {
     fetch(
       `https://best-artworks-open-api-pde.herokuapp.com/artworks${textInput}`
     )
@@ -20,7 +20,7 @@ export const Details = () => {
   }
 
   const handleInput = (e) => {
-    fetchNetflixTitles(textInput)
+    fetchArtworks(textInput)
     setTextInput("")
     setSelectedDetail([])
 

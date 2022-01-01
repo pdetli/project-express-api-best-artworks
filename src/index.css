@@ -1,9 +1,6 @@
 body {
   margin: 0;
-  /* font-family: "Cookie", cursive; */
   font-family: "Nunito", sans-serif;
-  /* font-family: "Poiret One", cursive;
-  font-family: "Roboto Mono", monospace; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f9f8f8;
@@ -28,7 +25,6 @@ header {
 }
 
 .card {
-  /* border: 3px solid #aa63d7; */
   background-color: #ffffff;
   margin: auto;
   padding: 0px 20px 0 20px;
