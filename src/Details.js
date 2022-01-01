@@ -56,7 +56,14 @@ export const Details = () => {
           {selectedDetail.map((art) => (
             <div key={art.id}>
               <div className="card">
-                <p className="name">{art.name}</p>
+                <a
+                  href={`${art.wikipedia}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="name"
+                >
+                  {art.name}
+                </a>
                 <p>
                   <span className="titles"> Year: </span>
                   {art.years}

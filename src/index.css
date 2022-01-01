@@ -56,12 +56,16 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   text-align: center;
-  background-color: #b462f340;
+  background-color: rgb(204 204 205 / 25%);
   padding: 5px;
   margin-top: 15px;
   color: #000520;
   box-shadow: 3px 3px 2px 1px rgb(194 194 197 / 20%);
   cursor: pointer;
+}
+
+.name:hover {
+  background-color: #edd6ff40;
 }
 
 a {
@@ -86,14 +90,14 @@ select {
   border-radius: 5px;
   font-size: 16px;
   color: navy;
-  border: 2px solid #ffe79f;
+  border: 2px solid #2a4fab;
   background-color: white;
 }
 
 .search-btn {
   border-radius: 5px;
   color: navy;
-  border: 2px solid #ffe79f;
+  border: 2px solid #2a4fab;
   height: 40px;
   font-size: 16px;
   margin-left: 30px;
